@@ -1,0 +1,20 @@
+{
+  "name": "school_management",
+  "version": "1.0.0",
+  "description": "School_management",
+  "main": "index.js",
+  "scripts": {
+   "start":"npx nodemon src/index.js"
+  },
+  "author": "ravi",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "http-status-codes": "^2.3.0",
+    "mysql2": "^3.13.0",
+    "nodemon": "^3.1.9",
+    "sequelize": "^6.37.6",
+    "sequelize-cli": "^6.6.2"
+  }
+}
