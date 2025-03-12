@@ -19,13 +19,26 @@ try {
     const response=await schoolRepository.get(id);
     return response;
 } catch (error) {
-    console.log('error in getSchoolService',error);
-    throw new AppError('Error in getSchoolService function',StatusCodes.BAD_REQUEST);
+    console.log('error in getSchoolServiceById',error);
+    throw new AppError('Error in getSchoolServiceById function',StatusCodes.BAD_REQUEST);
 }
+}
+
+
+async function getAllSchoolService() {
+    try {
+        const response=await schoolRepository.getAll();
+        return response;
+    } catch (error) {
+        console.log('error in getSchoolService',error);
+        throw new AppError('Error in getSchoolService function',StatusCodes.BAD_REQUEST);
+    }
 }
 
 
 module.exports={
     createSchoolService,
-    getSchoolServiceById
+    getSchoolServiceById,
+    getAllSchoolService,
+    
 }
