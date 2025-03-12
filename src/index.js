@@ -1,10 +1,20 @@
 
 const express = require('express');
 
+const apiRoutes=require('./routes');
+
+const serverConfig = require('./config/server-config');
+
 const app=express();
 
-const PORT=4000;
 
-app.listen(PORT,()=>{
-    console.log('server Started on PORT:',PORT);
+
+app.use(express.urlencoded({extended:true}));
+app.use(express.json());
+
+app.use('/api',apiRoutes);
+
+
+app.listen(serverConfig.PORT,()=>{
+    console.log(`Successfully started the server on port:${serverConfig.PORT}`);
 })
