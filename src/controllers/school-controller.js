@@ -18,6 +18,18 @@ async function createSchoolController(req,res) {
     }
 }
 
+async function getSchoolController(req,res) {
+    try {
+        const response=await SchoolService.getSchoolServiceById(req.params.id);
+        SuccessResponse.data=response;
+        return res.status(StatusCodes.OK).json(SuccessResponse);
+    } catch (error) {
+        ErrorResponse.error=error;
+        return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json(ErrorResponse);
+    }
+}
+
 module.exports={
-    createSchoolController
+    createSchoolController,
+    getSchoolController,
 }

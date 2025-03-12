@@ -14,8 +14,18 @@ async function createSchoolService(data) {
     }
 }
 
+async function getSchoolServiceById(id){
+try {
+    const response=await schoolRepository.get(id);
+    return response;
+} catch (error) {
+    console.log('error in getSchoolService',error);
+    throw new AppError('Error in getSchoolService function',StatusCodes.BAD_REQUEST);
+}
+}
 
 
 module.exports={
-    createSchoolService
+    createSchoolService,
+    getSchoolServiceById
 }
