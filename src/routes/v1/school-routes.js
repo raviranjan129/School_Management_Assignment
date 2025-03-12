@@ -9,4 +9,6 @@ router.post('/addschool',SchoolMiddleware.validateCreateRequest, SchoolControlle
 router.get('/getschool/:id',SchoolController.getSchoolController);
 router.get('/getschool',SchoolController.getAllSchoolController);
 
+
+
 module.exports=router;

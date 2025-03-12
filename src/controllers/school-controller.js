@@ -41,9 +41,11 @@ async function getAllSchoolController(req,res) {
     }
 }
 
+
 module.exports={
     createSchoolController,
     getSchoolController,
     getAllSchoolController,
     
+
 }

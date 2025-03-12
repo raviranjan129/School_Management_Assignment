@@ -36,9 +36,14 @@ async function getAllSchoolService() {
 }
 
 
+
+
+
+
 module.exports={
     createSchoolService,
     getSchoolServiceById,
     getAllSchoolService,
-    
+ 
+
 }
